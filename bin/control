@@ -45,7 +45,7 @@ function start() {
   if isrunning; then
       echo "Application is already running"
   else    
-    pushd ${OPENSHIFT_BROOKLYN_DIR}/infinispan
+    pushd ${OPENSHIFT_BROOKLYN_DIR}
       bin/brooklyn launch > ${OPENSHIFT_TMP_DIR}/${cartridge_type}.log 2>&1 &
       PROCESS_ID=$!
       echo $PROCESS_ID > $BROOKLYN_PID_FILE
